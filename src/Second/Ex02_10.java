@@ -7,6 +7,9 @@ public class Ex02_10 {
     public static void main(String[] args) {
         ServerSocket ss = null;
         Socket soc = null;
+        OutputStream out = null;
+        InputStream in = null;
+
         try{
             ss = new ServerSocket(12345);
             System.out.println("Server Ready....");
@@ -15,7 +18,9 @@ public class Ex02_10 {
         try{
             soc = ss.accept();
             System.out.println("Accessor : " + soc.toString());
-            ss.close();
+            out = soc.getOutputStream(); // be able to talk to the client.
+            in = soc.getInputStream();  // be able to hear from the client.
+            //ss.close();
         }catch(IOException ee){}
     }
 }
