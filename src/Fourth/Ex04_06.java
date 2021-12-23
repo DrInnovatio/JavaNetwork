@@ -36,7 +36,7 @@ public class Ex04_06 {
 //        assert in != null;
 //        System.out.println("in = " + in.toString());
 
-        System.out.println("header field(1) = " + uc.getHeaderField(1)  );
+        System.out.println("header field(1) = " + uc.getHeaderField(1));
 
 
 
